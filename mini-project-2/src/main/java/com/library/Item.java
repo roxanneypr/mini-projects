@@ -1,10 +1,11 @@
 package com.library;
 
+
 public abstract class Item {
-    //private static int nextItemId = 1;
     private int itemId;
     private String title;
 
+    // Item constuctor
     public Item(String title) {
         if (title == null || title.isEmpty()) {
             throw new IllegalArgumentException("Title cannot be null or empty");

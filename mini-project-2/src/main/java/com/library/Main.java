@@ -11,6 +11,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
+            // Print menu
             System.out.println("\nMain Menu:");
             System.out.println("[1] Add Book");
             System.out.println("[2] Remove Book");
@@ -19,6 +20,7 @@ public class Main {
             System.out.println("[0] Exit");
             System.out.print("Enter your choice: ");
 
+            // Get menu choice and validate if correct
             int choice = -1;
             try {
                 choice = scanner.nextInt();
@@ -30,6 +32,7 @@ public class Main {
             }
 
             switch (choice) {
+                // For adding book
                 case 1:
                     System.out.print("Enter book title: ");
                     String title = scanner.nextLine();
@@ -38,6 +41,7 @@ public class Main {
                     System.out.print("Enter book ISBN: ");
                     String isbn = scanner.nextLine();
 
+                    // catch errors in wrong input for adding books
                     try {
                         Book book = new Book(title, author, isbn);
                         library.addBook(book);
@@ -45,21 +49,22 @@ public class Main {
                         System.out.println("Error: " + e.getMessage());
                     }
                     break;
-
+                // Remove book
                 case 2:
                     if (library.getBookCount() == 0) {
                         System.out.println("The library is empty.");
                     } else {
                         System.out.print("Enter book Item ID to remove: ");
                         int itemId = -1;
+                        // Catch invalid inputs
                         try {
                             itemId = scanner.nextInt();
                             scanner.nextLine(); // consume newline
                             if (itemId <= 0) {
-                                throw new IllegalArgumentException("Invalid Item ID. Please enter a positive integer.");
+                                throw new IllegalArgumentException("Please enter a positive integer.");
                             }
                         } catch (InputMismatchException e) {
-                            System.out.println("Invalid input. Please enter a valid Item ID.");
+                            System.out.println("Please enter a valid Item ID.");
                             scanner.nextLine(); // consume invalid input
                             break;
                         } catch (IllegalArgumentException e) {
@@ -69,6 +74,7 @@ public class Main {
                         library.removeBook(itemId);
                     }
                     break;
+                // Search book by title
                 case 3:
 
                     if (library.getBookCount() == 0) {
@@ -87,7 +93,7 @@ public class Main {
                         }
                     }
                     break;
-
+                // Show all books
                 case 4:
                     library.listBooks();
                     break;
