@@ -1,15 +1,13 @@
 # JAVA MINI PROJECTS
 
 ## Overview
-Compilation of my java mini projects for Stratpoint internship.
-Mini project 1 - Simple calculator
-
+Compilation of my java mini projects for Stratpoint internship.<br/>
+Mini project 1 - Simple calculator<br/>
 Mini project 2 - Library Management System
 
 
 ## About
-Author: Roxanne Ysabel Resuello
-
+Author: Roxanne Ysabel Resuello<br/>
 Date: June 2024
 
 ## HOW TO RUN
