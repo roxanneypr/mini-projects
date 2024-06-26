@@ -1,12 +1,12 @@
 # Library Management System
 
 ## Overview
-A java program for a terminal-based management system. This allows the user to manage a library using the
+A java program for a terminal-based library management system. This allows the user to manage a library using the
 the following functionalities:
-1. Add a book
-2. Remove a book
-3. Search for a book
-4. View all books
+1. Add a book - allows a user to add a book in the library
+2. Remove a book - allows a user to remove a book from the library
+3. Search for a book - allows a user to search for a specific book in the library
+4. View all books - allows a user to view all books stored in the library
 
 
 ## About
