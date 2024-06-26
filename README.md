@@ -3,11 +3,13 @@
 ## Overview
 Compilation of my java mini projects for Stratpoint internship.
 Mini project 1 - Simple calculator
+
 Mini project 2 - Library Management System
 
 
 ## About
 Author: Roxanne Ysabel Resuello
+
 Date: June 2024
 
 ## HOW TO RUN
