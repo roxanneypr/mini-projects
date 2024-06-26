@@ -82,11 +82,16 @@ public class Main {
                     } else {
                         System.out.print("Enter book title to search: ");
                         String searchTitle = scanner.nextLine();
+
+                        if (searchTitle.isEmpty()){
+                            System.out.println("The field is empty.");
+                            break;
+                        }
                         List<Book> foundBooks = library.findBooksByTitle(searchTitle);
                         if (foundBooks.isEmpty()) {
                             System.out.println("No books found with title containing: " + searchTitle);
                         } else {
-                            System.out.println("Found books:");
+                            System.out.print("Found books:");
                             for (Book book : foundBooks) {
                                 System.out.println(book);
                             }
@@ -104,7 +109,7 @@ public class Main {
                     return;
 
                 default:
-                    System.out.println("Invalid choice. Please try again.");
+                    System.out.println("Invalid choice.");
             }
         }
     }
