@@ -2,9 +2,16 @@ package com.ecommerce;
 
 import java.util.Scanner;
 
-public class App {
+import com.ecommerce.model.Product;
+import com.ecommerce.service.CartService;
+import com.ecommerce.service.CartServiceImpl;
+import com.ecommerce.service.ProductService;
+import com.ecommerce.service.ProductServiceImpl;
+
+public class Main {
     public static void main(String[] args) {
-        Cart cart = new Cart();
+        CartService cartService = new CartServiceImpl();
+        ProductService productService = new ProductServiceImpl();
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
@@ -32,17 +39,19 @@ public class App {
                         double price = Double.parseDouble(scanner.nextLine());
                         System.out.print("Enter product ID: ");
                         String productId = scanner.nextLine();
-                        Product product = new Product(name, price, productId);
-                        cart.addProduct(product);
+                        Product product = productService.createProduct(name, price, productId);
+                        cartService.addProduct(product);
                     } catch (IllegalArgumentException e) {
                         System.out.println("Error: " + e.getMessage());
-                    }
+                    } /* catch (NumberFormatException e) {
+                        System.out.println("Invalid price. Please enter a valid number.");
+                    } */
                     break;
                 case 2:
-                    cart.viewCart();
+                    cartService.viewCart();
                     break;
                 case 3:
-                    System.out.println("Total price: " + cart.calculateTotalPrice());
+                    System.out.println("Total price: " + cartService.calculateTotalPrice());
                     break;
                 case 0:
                     System.out.println("Exiting...");
