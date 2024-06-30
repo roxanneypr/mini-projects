@@ -1,18 +1,13 @@
 package com.ecommerce;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
-
+import com.ecommerce.model.Cart;
+import com.ecommerce.model.Product;
+import com.ecommerce.service.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.ecommerce.model.Cart;
-import com.ecommerce.model.Product;
-import com.ecommerce.service.CartService;
-import com.ecommerce.service.CartServiceImplementation;
-import com.ecommerce.service.Ecommerce;
-import com.ecommerce.service.ProductService;
-import com.ecommerce.service.ProductServiceImplementation;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class Main {
     private static final Logger logger = LoggerFactory.getLogger(Main.class);
@@ -23,14 +18,25 @@ public class Main {
         Ecommerce ecommerce = new Ecommerce(cartService, productService);
 
         // Adding products to the catalog
-        Product laptop = new Product("P001", "Laptop", 999.99, "Electronics");
-        Product smartphone = new Product("P002", "Smartphone", 499.99, "Electronics");
+        Product laptop = new Product("Laptop", 999.99, "Electronics");
+        Product smartphone = new Product("Smartphone", 499.99, "Electronics");
+        Product tablet = new Product("Tablet", 299.99, "Electronics");
+        Product headphones = new Product("Headphones", 149.99, "Electronics");
+        Product keyboard = new Product("Keyboard", 79.99, "Electronics");
+        Product monitor = new Product("Monitor", 199.99, "Electronics");
+        Product mouse = new Product("Mouse", 49.99, "Electronics");
 
+        // Adding products to the catalog
         ecommerce.addProductToCatalog(laptop);
         ecommerce.addProductToCatalog(smartphone);
+        ecommerce.addProductToCatalog(tablet);
+        ecommerce.addProductToCatalog(headphones);
+        ecommerce.addProductToCatalog(keyboard);
+        ecommerce.addProductToCatalog(monitor);
+        ecommerce.addProductToCatalog(mouse);
 
         // Creating a cart
-        Cart cart = new Cart("C001");
+        Cart cart = new Cart();
         cartService.addCart(cart);
 
         Scanner scanner = new Scanner(System.in);
@@ -43,10 +49,10 @@ public class Main {
 
             // Display menu options
             System.out.println("\nMain Menu:");
-            System.out.println("1. Add item to cart");
-            System.out.println("2. Remove item from cart");
-            System.out.println("3. Calculate total price in cart");
-            System.out.println("0. Exit");
+            System.out.println("[1] Add item to cart");
+            System.out.println("[2] Remove item from cart");
+            System.out.println("[3] Calculate total price in cart");
+            System.out.println("[0] Exit");
 
             System.out.print("Enter your choice: ");
             int choice = -1;
@@ -60,7 +66,7 @@ public class Main {
             }
 
             switch (choice) {
-                case 1:
+                case 1: // add item to cart
                     System.out.print("Enter Product ID to add to cart: ");
                     String productIdToAdd = scanner.nextLine();
                     Product productToAdd = productService.getProduct(productIdToAdd);
@@ -70,7 +76,8 @@ public class Main {
                         System.out.println("Product not found.");
                     }
                     break;
-                case 2:
+                case 2: // remove item from cart
+                    ecommerce.showProductsInCart(cart.getCartId());
                     System.out.print("Enter Product ID to remove from cart: ");
                     String productIdToRemove = scanner.nextLine();
                     Product productToRemove = productService.getProduct(productIdToRemove);
@@ -80,7 +87,7 @@ public class Main {
                         System.out.println("Product not found.");
                     }
                     break;
-                case 3:
+                case 3: // compute total price of items in cart
                     double total = ecommerce.calculateCartTotal(cart.getCartId());
                     System.out.println("Total price of the cart: " + total);
                     break;

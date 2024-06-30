@@ -55,12 +55,12 @@
                     <artifactId>maven-jar-plugin</artifactId>
                     <version>3.0.2</version>
                     <configuration>
-                      <archive>
-                          <manifest>
-                              <addClasspath>true</addClasspath>
-                              <mainClass>com.ecommerce.Main</mainClass>
-                          </manifest>
-                      </archive>
+                        <archive>
+                            <manifest>
+                                <addClasspath>true</addClasspath>
+                                <mainClass>com.ecommerce.Main</mainClass>
+                            </manifest>
+                        </archive>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -85,17 +85,21 @@
                     <version>3.6.0</version>
                 </plugin>
                 <plugin>
-                  <groupId>org.codehaus.mojo</groupId>
-                  <artifactId>exec-maven-plugin</artifactId>
-                  <version>3.0.0</version>
-                  <configuration>
-                    <includePluginDependencies>true</includePluginDependencies>
-                    <mainClass>com.ecommerce.Main</mainClass>
-                    <arguments>
-                      <argument>configFile</argument>
-                      <argument>properties</argument>
-                    </arguments>
-                  </configuration>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>exec-maven-plugin</artifactId>
+                    <version>3.0.0</version>
+                    <configuration>
+                        <mainClass>com.ecommerce.Main</mainClass>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>exec</id>
+                            <phase>validate</phase> <!-- Or another appropriate phase -->
+                            <goals>
+                                <goal>java</goal>
+                            </goals>
+                        </execution>
+                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>
