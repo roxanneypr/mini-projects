@@ -69,7 +69,7 @@ public class Product {
      */
     @Override
     public String toString() {
-        return String.format("%-15s %s\t%-15s %s\t%-15s %.2f\t%-15s %s",
+        return String.format("%-15s %-36s\t | %-10s %-10s\t | %-15s %.2f\t | %-15s %-20s",
                 "productId:", productId,
                 "name:", name,
                 "price:", price,
