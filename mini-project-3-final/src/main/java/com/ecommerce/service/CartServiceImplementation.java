@@ -3,6 +3,7 @@ package com.ecommerce.service;
 import com.ecommerce.model.Cart;
 import com.ecommerce.model.Product;
 
+import java.util.Optional;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -46,10 +47,8 @@ public class CartServiceImplementation implements CartService {
      */
     @Override
     public void addProductToCart(String cartId, Product product) {
-        Cart cart = getCart(cartId);
-        if (cart != null) {
-            cart.addProduct(product);
-        }
+        Optional.ofNullable(getCart(cartId))
+                .ifPresent(cart -> cart.addProduct(product));
     }
 
     /**
@@ -60,10 +59,8 @@ public class CartServiceImplementation implements CartService {
      */
     @Override
     public void removeProductFromCart(String cartId, Product product) {
-        Cart cart = getCart(cartId);
-        if (cart != null) {
-            cart.removeProduct(product);
-        }
+        Optional.ofNullable(getCart(cartId))
+                .ifPresent(cart -> cart.removeProduct(product));
     }
 
     /**

@@ -5,31 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42d4d2dc-9c94-4ac3-a0cb-a3ca94d45ce4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/service/Ecommerce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/service/Ecommerce.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/service/ProductServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/service/ProductServiceImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ecommerce/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ecommerce/model/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ecommerce/service/Ecommerce.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ecommerce/service/Ecommerce.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ecommerce/service/ProductServiceImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ecommerce/service/ProductServiceImplementation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mini-project-3-final-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/mini-project-3-final-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ecommerce.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ecommerce.AppTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ecommerce.CartServiceImplementationTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ecommerce.CartServiceImplementationTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ecommerce.CartTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ecommerce.CartTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ecommerce.EcommerceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ecommerce.EcommerceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ecommerce.ProductServiceImplementationTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ecommerce.ProductServiceImplementationTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ecommerce.ProductTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ecommerce.ProductTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.ecommerce.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.ecommerce.AppTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.ecommerce.CartServiceImplementationTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.ecommerce.CartServiceImplementationTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.ecommerce.CartTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.ecommerce.CartTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.ecommerce.EcommerceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.ecommerce.EcommerceTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.ecommerce.ProductServiceImplementationTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.ecommerce.ProductServiceImplementationTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.ecommerce.ProductTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.ecommerce.ProductTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/service/CartServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/service/CartServiceImplementation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
