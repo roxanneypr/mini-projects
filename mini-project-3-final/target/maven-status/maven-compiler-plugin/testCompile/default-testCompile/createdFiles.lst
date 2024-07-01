@@ -1,0 +1,6 @@
+com\ecommerce\CartServiceImplementationTest.class
+com\ecommerce\AppTest.class
+com\ecommerce\EcommerceTest.class
+com\ecommerce\ProductServiceImplementationTest.class
+com\ecommerce\ProductTest.class
+com\ecommerce\CartTest.class
