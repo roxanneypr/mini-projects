@@ -107,9 +107,7 @@ public class Ecommerce {
             Cart cart = cartService.getCart(cartId);
             if (cart != null) {
                 logger.debug("Products in cart: ");
-                for (Product product : cart.getProducts()) {
-                    System.out.println(product);
-                }
+                cart.getProducts().forEach(product -> System.out.println(product));
             } else {
                 logger.error("Cart with ID {} not found", cartId);
             }

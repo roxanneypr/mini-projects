@@ -69,9 +69,10 @@ public class Product {
      */
     @Override
     public String toString() {
-        return "\tproductId: " + productId +
-                "\t\t\tname: " + name +
-                "\t\t\tprice: " + price +
-                "\t\t\tcategory: " + category;
+        return String.format("%-15s %s\t%-15s %s\t%-15s %.2f\t%-15s %s",
+                "productId:", productId,
+                "name:", name,
+                "price:", price,
+                "category:", category);
     }
 }

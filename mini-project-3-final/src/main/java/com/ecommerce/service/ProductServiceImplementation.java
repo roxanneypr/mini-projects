@@ -41,9 +41,7 @@ public class ProductServiceImplementation implements ProductService {
         if (products.isEmpty()) {
             System.out.println("No products available.");
         } else {
-            for (Product product : products.values()) {
-                System.out.println(product);
-            }
+            products.values().forEach(product -> System.out.println(product));
         }
     }
 }
